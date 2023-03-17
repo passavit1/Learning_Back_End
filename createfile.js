@@ -24,6 +24,8 @@ var fs = require("fs");
 //   console.log("Deleted!");
 // });
 
+// tester
+
 fs.rename("log.txt", "log2.txt", function (err) {
   if (err) throw err;
   console.log("updated file name");
