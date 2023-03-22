@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const PORT = 8080;
 const register = require("./src/register");
+const login = require("./src/login");
 
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
@@ -26,4 +27,8 @@ app.get("/hello", async (req, res) => {
 
 app.post("/register", async (req, res) => {
   register(req, res);
+});
+
+app.post("/login", async (req, res) => {
+  login(req, res);
 });
