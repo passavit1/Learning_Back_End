@@ -4,6 +4,8 @@ const app = express();
 const PORT = 8080;
 const register = require("./src/register");
 const login = require("./src/login");
+const votePokemon = require("./src/votePokemon");
+const auth = require("./middleware/auth");
 
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
@@ -31,4 +33,8 @@ app.post("/register", async (req, res) => {
 
 app.post("/login", async (req, res) => {
   login(req, res);
+});
+
+app.post("/pokemon/vote", auth, async (req, res) => {
+  votePokemon(req, res);
 });
