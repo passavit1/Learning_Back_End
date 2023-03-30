@@ -38,6 +38,7 @@ const generateToken = async (data) => {
   }
 };
 
+// export anything that
 module.exports = {
   commonService: {
     encrypted,
