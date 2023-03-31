@@ -30,6 +30,8 @@ const exec = async (req, res, next) => {
           lastName: i.last_name,
           userName: i.user_name,
         }));
+
+        // Generate token every time the user is logged in
         responseData._token = await common.commonService.generateToken(
           tokenObj
         );
