@@ -4,6 +4,8 @@ const common = require("./common/common");
 
 const exec = async (req, res, next) => {
   let client = await pool.connect();
+
+  // BEGIN for starting
   await client.query("BEGIN");
   let responseData = {};
   try {
