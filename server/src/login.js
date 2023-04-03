@@ -4,12 +4,12 @@ const common = require("./common/common");
 const exec = async (req, res, next) => {
   let responseData = {};
   let client = await pool.connect();
+  await client.query("BEGIN");
 
   try {
-    await client.query("BEGIN");
     let data = req.body;
 
-    let sql = `SELECT * FROM public.user where user_name = $1`;
+    let sql = `SELECT * FROM public."user" where user_name = $1`;
     let param = [data.userName];
     let responseUser = await pool.query(sql, param);
 
