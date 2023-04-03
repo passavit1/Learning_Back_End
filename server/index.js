@@ -7,6 +7,7 @@ const login = require("./src/login");
 const votePokemon = require("./src/votePokemon");
 const auth = require("./middleware/auth");
 const getScorePokemon = require("./src/getScorePokemon");
+const prac = require("./src/prac");
 
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
@@ -42,4 +43,8 @@ app.post("/pokemon/vote", auth, async (req, res) => {
 
 app.get("/pokemon/score/all", auth, async (req, res) => {
   getScorePokemon(req, res);
+});
+
+app.post("/prac", async (req, res) => {
+  prac(req, res);
 });
