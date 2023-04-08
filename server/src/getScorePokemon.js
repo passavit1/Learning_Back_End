@@ -20,7 +20,7 @@ const exec = async (req, res, next) => {
       responseData.success = false;
     }
   } catch (error) {
-    console.error(error);
+    console.error(error, "<<< error");
     responseData.success = false;
   } finally {
     client.release();
