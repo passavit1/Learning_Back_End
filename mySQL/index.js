@@ -7,6 +7,112 @@ var con = mysql.createConnection({
   database: "wizat",
 });
 
+// Join
+
+// con.connect((err) => {
+//   if (err) throw err;
+//   console.log("connected");
+
+//   var sql =
+//     "select customer.name as name , address.name as address from customer join address on customer.address = address.id ";
+//   con.query(sql, (err, result) => {
+//     if (err) throw err;
+//     console.log(result);
+//   });
+// });
+
+// Limit and Offset
+// off set used for which row you want to start
+// syntax = limit offset , limit
+
+// con.connect((err) => {
+//   if (err) throw err;
+//   console.log("connected");
+
+//   let sql = "select * from customer limit 2, 3 "; // same as limit 3 offset 2
+
+//   con.query(sql, (err, result) => {
+//     if (err) throw err;
+//     console.log(result);
+//   });
+// });
+
+// Update database
+
+// con.connect((err) => {
+//   if (err) throw err;
+//   console.log("connected");
+
+//   let sql = "update customer set address = 'bkk' where address = 'thai'";
+//   con.query(sql, (err, result) => {
+//     if (err) throw err;
+//     console.log(result);
+//   });
+// });
+
+// Delete if exits
+
+// con.connect((err) => {
+//   if (err) throw err;
+//   console.log("connected");
+
+//   var sql = "drop table if exists tester";
+//   con.query(sql, (err, result, fields) => {
+//     if (err) throw err;
+//     console.log(result);
+//   });
+// });
+
+// Delete Table
+
+// con.connect((err) => {
+//   if (err) throw err;
+//   console.log("connected");
+
+//   var sql = "drop table tester";
+
+//   con.query(sql, (err, result) => {
+//     if (err) throw err;
+//     console.log(result);
+//   });
+// });
+
+// Delete rows
+
+// con.connect((err) => {
+//   if (err) throw err;
+//   console.log("connected");
+
+//   var del = "maicharoen";
+//   var sql = "delete from customer where name = ?";
+
+//   con.query(sql, [del], (err, result, fields) => {
+//     if (err) throw err;
+//     console.log(result);
+//   });
+// });
+
+// Order by
+
+// con.connect((err) => {
+//   if (err) throw err;
+//   console.log("connected");
+
+//   let name = "p%";
+//   let sql = "select * from customer where name like ? order by name";
+//   let sql2 = "select * from customer where name like ? order by name desc";
+
+//   con.query(sql, [name], (err, result, fields) => {
+//     if (err) throw err;
+//     console.log(result);
+//   });
+
+//   con.query(sql2, [name], (err, result, fields) => {
+//     if (err) throw err;
+//     console.log(result);
+//   });
+// });
+
 // Escaping Query
 
 // con.connect((error) => {
@@ -79,6 +185,19 @@ var con = mysql.createConnection({
 //   con.query(sql, [value], (err, result) => {
 //     if (err) throw err;
 //     console.log("Number of records inserted: " + result.affectedRows);
+//   });
+// });
+
+// Add column to table with alter table
+
+// con.connect((err) => {
+//   if (err) throw err;
+//   console.log("connected");
+
+//   let sql = "alter table customer add column product varchar(255)";
+//   con.query(sql, (err, result) => {
+//     if (err) throw err;
+//     console.log(result);
 //   });
 // });
 
