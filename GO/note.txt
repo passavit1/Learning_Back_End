@@ -1,0 +1,22 @@
+%d: Print integers in decimal format.
+%f: Print floating-point numbers (float64) in decimal format.
+%s: Print strings.
+%q: Print strings in double quotes, with special characters escaped.
+%t: Print boolean values.
+%v: Print the value in a default format.
+%b: Print integers in binary format.
+%o: Print integers in octal format.
+%x: Print integers in hexadecimal format (lowercase letters).
+%X: Print integers in hexadecimal format (uppercase letters).
+%c: Print the Unicode character represented by the integer.
+%p: Print a pointer in hexadecimal notation.
+
+&& 	Logical and
+|| 	Logical or
+!	Logical not
+
+& 	AND
+|	OR
+^	XOR
+<<	Zero fill left shift
+>>	Signed right shift
