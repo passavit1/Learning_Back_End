@@ -6,12 +6,16 @@ namespace BasicASP.Controllers
     {
         public IActionResult Index()
         {
-            return Content("score");
+            return View();
         }
 
-        public IActionResult ShowScore(int id)
+        public IActionResult Create()
         {
-            return Content($"score {id}");
+            return View();
+        }
+        public IActionResult About()
+        {
+            return View();
         }
 
 
